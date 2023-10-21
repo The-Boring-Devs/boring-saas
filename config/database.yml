@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV['DATABASE_HOST'] %>
+  username: <%= ENV['DATABASE_USER'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: <%= ENV.fetch('DEVELOPMENT_DATABASE_NAME', 'saas_template_development') %>
+
+test:
+  <<: *default
+  database: <%= ENV.fetch('TEST_DATABASE_NAME', 'saas_template_test') %>
+
+production:
+  <<: *default
+  database: saas_template_production
+  username: saas_template
+  password: <%= ENV["SAAS_TEMPLATE_DATABASE_PASSWORD"] %>
