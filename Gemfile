@@ -49,6 +49,7 @@ group :development, :test do
   gem "debug", platforms: %i[mri windows]
   gem "dotenv-rails"
   gem "standard"
+  gem "standard-rails"
 end
 
 group :development do
