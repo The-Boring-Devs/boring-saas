@@ -12,7 +12,7 @@
       <%= error_hint(f, :email) %>
     </div>
 
-    <div class="field">
+    <div>
       <%= f.label :password, class: label_field_classes(f, :password) %>
       <% if @minimum_password_length %>
         <em class="text-sm text-white">(<%= @minimum_password_length %> characters minimum)</em>
@@ -21,7 +21,7 @@
       <%= error_hint(f, :password) %>
     </div>
 
-    <div class="field">
+    <div>
       <%= f.label :password_confirmation, class: label_field_classes(f, :password_confirmation) %>
       <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '••••••••', class: input_field_classes(f, :password_confirmation) %>
       <%= error_hint(f, :password_confirmation) %>
