@@ -69,6 +69,7 @@ group :test do
   gem "selenium-webdriver"
   gem "factory_bot", "~> 6.4"
   gem "faker", "~> 3.2"
+  gem "shoulda-matchers", "~> 5.3"
 end
 
 gem "devise", "~> 4.9"
