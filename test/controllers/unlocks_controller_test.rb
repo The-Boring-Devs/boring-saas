@@ -7,7 +7,9 @@ class UnlocksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should send unlock instructions" do
-    post user_unlock_path, params: {user: {email: @user.email}}
+    assert_emails 1 do
+      post user_unlock_path, params: {user: {email: @user.email}}
+    end
     assert_redirected_to new_user_session_path
     follow_redirect!
     assert_equal "You will receive an email with instructions for how to unlock your account in a few minutes.", flash[:notice]

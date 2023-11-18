@@ -6,6 +6,7 @@ module ActiveSupport
   class TestCase
     include FactoryBot::Syntax::Methods
     include Devise::Test::IntegrationHelpers
+    include ActionMailer::TestHelper
 
     # Run tests in parallel with specified workers
     parallelize(workers: :number_of_processors)

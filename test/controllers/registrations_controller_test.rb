@@ -15,6 +15,12 @@ class RegistrationsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_path
   end
 
+  test "should send confirmation email" do
+    assert_emails 1 do
+      post user_registration_path, params: @user_params
+    end
+  end
+
   test "should not create user with invalid email" do
     @user_params[:user][:email] = "invalid_email"
     assert_no_difference "User.count" do
