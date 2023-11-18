@@ -50,6 +50,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem "standard"
   gem "standard-rails"
+  gem "factory_bot_rails", "~> 6.4"
 end
 
 group :development do
@@ -67,9 +68,9 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-  gem "factory_bot", "~> 6.4"
   gem "faker", "~> 3.2"
-  gem "shoulda-matchers", "~> 5.3"
 end
 
 gem "devise", "~> 4.9"
+
+gem "shoulda-matchers", "~> 5.3", :group => :test
