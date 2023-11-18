@@ -74,3 +74,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "shoulda-matchers", "~> 5.3", :group => :test
+
+gem "foreman", "~> 0.87.2"
